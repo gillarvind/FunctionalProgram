@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class HarmonicNumber
+    internal class SwapNumber
     {
-        int num = 5;
-        double result = 0.0;
-        public void nharmonic()
+        int num1 = 23;
+        int num2 = 45;
+        int temp;
+        public void swap()
         {
-            while (num > 0)
-            {
-                result += (double)1 / num;
-                num--;
-                Console.WriteLine(result);
-            }
+            Console.WriteLine("before swapping number");
+            Console.WriteLine(num1);
+            Console.WriteLine(num2);
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+            Console.WriteLine("after swapping number");
+            Console.WriteLine(num1);
+            Console.WriteLine(num2);
         }
     }
 }
