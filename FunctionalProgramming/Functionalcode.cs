@@ -6,19 +6,27 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class EvenOdd
+    internal class FindLargest
     {
-        public void checkev()
+        public void largest()
         {
-            Console.WriteLine("enter any number");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 == 0)
+            Console.WriteLine("enter first number");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter first number");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter first number");
+            int num3 = int.Parse(Console.ReadLine());
+            if (num1 > num2 && num1 > num3)
             {
-                Console.WriteLine("this is even number");
+                Console.WriteLine("first number is largest number" + num1);
+            }
+            if (num2 > num3 && num2 > num3)
+            {
+                Console.WriteLine("second number is largest number" + num2);
             }
             else
             {
-                Console.WriteLine("this is odd number");
+                Console.WriteLine("third number is largest number" + num3);
             }
         }
     }
