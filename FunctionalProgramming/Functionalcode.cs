@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class FindLargest
+    internal class HarmonicNumber
     {
-        public void largest()
+        int num = 5;
+        double result = 0.0;
+        public void nharmonic()
         {
-            Console.WriteLine("enter first number");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter first number");
-            int num2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter first number");
-            int num3 = int.Parse(Console.ReadLine());
-            if (num1 > num2 && num1 > num3)
+            while (num > 0)
             {
-                Console.WriteLine("first number is largest number" + num1);
-            }
-            if (num2 > num3 && num2 > num3)
-            {
-                Console.WriteLine("second number is largest number" + num2);
-            }
-            else
-            {
-                Console.WriteLine("third number is largest number" + num3);
+                result += (double)1 / num;
+                num--;
+                Console.WriteLine(result);
             }
         }
     }
