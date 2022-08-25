@@ -6,24 +6,43 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class PowerTwo
+    internal class AlphVow
     {
-        int basenumber, exponent, power, i;
-        public void powerpro()
+        char ch;
+        public void alfavow()
         {
-            Console.Write("Enter any number");
-            basenumber = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter any power: ");
-            exponent = Convert.ToInt32(Console.ReadLine());
-            power = 1;
-            i = 1;
-            while (i <= exponent)
+            Console.Write("use input as  Alphabet (A-Z or a-z):");
+            ch = Convert.ToChar(Console.ReadLine().ToLower());
+            int i = ch;
+            if (i >= 48 && i <= 57)
             {
-                power = power * basenumber;
-                i++;
+                Console.Write("Please enter an alpahbet number.");
             }
-            Console.Write("Power : " + power);
-            Console.ReadLine();
+            else
+            {
+                switch (ch)
+                {
+                    case 'a':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'e':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'i':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'o':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'u':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    default:
+                        Console.WriteLine("The Alphabet is not a vowel");
+                        break;
+                }
+            }
+            Console.ReadKey();
         }
     }
 }
