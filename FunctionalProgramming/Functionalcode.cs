@@ -6,19 +6,39 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class QuoRem
+    internal class FlipCoin
     {
-        int divident = 50, divisor = 8;
-        public void quorem()
+        int head = 0;
+        int tail = 0;
+        int count = 1;
+        public void FlipCo()
         {
-            Console.WriteLine("enter any divident number:");
-            int divident = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter any diviser:");
-            int divisor = int.Parse(Console.ReadLine());
-            int quotient = divident / divisor;
-            int reminder = divident % divisor;
-            Console.WriteLine("quotient-" + quotient);
-            Console.WriteLine("reminder-" + reminder);
+            Console.WriteLine("enter any number");
+            int flips = Convert.ToInt32(Console.ReadLine());
+            while (count <= flips)
+            {
+                Random random = new Random();
+                double check = random.NextDouble();
+                Console.WriteLine(check);
+                if (check < 0.5)
+                {
+                    tail++;
+                    Console.WriteLine("tail");
+                }
+                else
+                {
+                    head++;
+                    Console.WriteLine("head");
+                }
+                count++;
+            }
+            Console.WriteLine();
+            Console.WriteLine("number of heads:" + head);
+            Console.WriteLine("number of tails:" + tail);
+            double headper = (double)head / flips * 100;
+            double tailper = (double)tail / flips * 100;
+            Console.WriteLine("head percentage:" + headper);
+            Console.WriteLine("tail percentage:" + tailper);
         }
     }
 }
