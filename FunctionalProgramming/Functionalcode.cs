@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class LeapYear
+    internal class PowerTwo
     {
-        public void yearcheck()
+        int basenumber, exponent, power, i;
+        public void powerpro()
         {
-            Console.WriteLine("enter any year:");
-            int year = int.Parse(Console.ReadLine());
-            if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+            Console.Write("Enter any number");
+            basenumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter any power: ");
+            exponent = Convert.ToInt32(Console.ReadLine());
+            power = 1;
+            i = 1;
+            while (i <= exponent)
             {
-                Console.WriteLine("leap year");
+                power = power * basenumber;
+                i++;
             }
-            else
-            {
-                Console.WriteLine("not a leap year");
-            }
+            Console.Write("Power : " + power);
+            Console.ReadLine();
         }
     }
 }
