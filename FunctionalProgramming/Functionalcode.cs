@@ -6,25 +6,19 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class Factors
+    internal class QuoRem
     {
-        int num;
-        public void fact()
+        int divident = 50, divisor = 8;
+        public void quorem()
         {
-            Console.WriteLine("enter any number");
-            int num = int.Parse(Console.ReadLine());
-            for (int i = 2; i <= num; i++)
-            {
-                while (num % i == 0)
-                {
-                    Console.WriteLine(i + " ");
-                    num = num / i;
-                }
-            }
-            if (num >= 2)
-            {
-                Console.WriteLine(num);
-            }
+            Console.WriteLine("enter any divident number:");
+            int divident = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter any diviser:");
+            int divisor = int.Parse(Console.ReadLine());
+            int quotient = divident / divisor;
+            int reminder = divident % divisor;
+            Console.WriteLine("quotient-" + quotient);
+            Console.WriteLine("reminder-" + reminder);
         }
     }
 }
