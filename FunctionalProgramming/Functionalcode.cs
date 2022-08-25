@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace FunctionalProgramming
 {
-    internal class SwapNumber
+    internal class Factors
     {
-        int num1 = 23;
-        int num2 = 45;
-        int temp;
-        public void swap()
+        int num;
+        public void fact()
         {
-            Console.WriteLine("before swapping number");
-            Console.WriteLine(num1);
-            Console.WriteLine(num2);
-            temp = num1;
-            num1 = num2;
-            num2 = temp;
-            Console.WriteLine("after swapping number");
-            Console.WriteLine(num1);
-            Console.WriteLine(num2);
+            Console.WriteLine("enter any number");
+            int num = int.Parse(Console.ReadLine());
+            for (int i = 2; i <= num; i++)
+            {
+                while (num % i == 0)
+                {
+                    Console.WriteLine(i + " ");
+                    num = num / i;
+                }
+            }
+            if (num >= 2)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
